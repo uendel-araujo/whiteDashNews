@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\News;
+use Validator;
 
 class NewsController extends Controller
 {
@@ -41,6 +42,12 @@ class NewsController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request,[
+            'author_name' => 'required',
+            'title' => 'required',
+            'subtitle' => 'required',
+            'description' => 'required'
+        ]);
         News::create($request->all());
 
         return redirect()->route('news.index');
