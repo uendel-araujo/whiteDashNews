@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app', ['pageSlug' => 'welcome'])
 
 @section('content')
     <div class="header py-7 py-lg-8">

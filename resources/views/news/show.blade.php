@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app', ['pageSlug' => 'show'])
 
 @section('content')
   <div class="card" style="width: 100%;">

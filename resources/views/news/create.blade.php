@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app', ['pageSlug' => 'create'])
 
 @section('content')
   <h1 class="d-flex justify-content-center mb-4 mt-4">Create Your News</h1>
